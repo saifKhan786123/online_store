@@ -22,7 +22,7 @@
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                                Total Users</div>
+                                                Total Active Users</div>
                                             <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $userCount; ?></div>
                                         </div>
                                         <div class="col-auto">
@@ -41,7 +41,7 @@
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                                Total products</div>
+                                                Total Active products</div>
                                             <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $productCount; ?></div>
                                         </div>
                                         <div class="col-auto">
@@ -59,7 +59,7 @@
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                                Active user Products</div>
+                                                Active user with Active Products</div>
                                             <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $CountActiveUserProducts; ?></div>
                                         </div>
                                         <div class="col-auto">

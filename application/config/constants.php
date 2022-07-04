@@ -93,3 +93,9 @@ define('INACTIVE_USERS', 0);
 
 define('ACTIVE_PRODUCT', 1);
 define('INACTIVE_PRODUCT', 0);
+
+// Check Ajax
+define('IS_AJAX', isset($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest');
+
+// Exchange API key
+define('API_KEY','Q5meTLIR85i7ecaHvQ8u8HcGSK1ZZ27r');

@@ -71,6 +71,35 @@ class Admin extends CI_Controller{
         $this->load->view('admin/details/details_view.php');
     }
 
+    public function exchange(){
+        
+        $this->load->view('admin/converter/exchange_view.php');
+    }
+
+    public function convert_price() {
+        if(!IS_AJAX){
+            exit('Direct script not allowed!');
+        }
+        ajax_headers();
+
+        if($this->input->post()){
+            $amount = $this->input->post('amount');
+            $to = $this->input->post('to');
+            // $to = "USD1";
+            $from = $this->input->post('from');
+
+            $response = exchange_price_curl($amount, $to , $from);
+            
+            if($response['status'] == true) {
+                $message = 'Successfully get result';
+                 ajax_response(true,$response['amount'],$message);
+            }else{
+                ajax_response(false,[],$response['message']);
+            }
+            
+        }
+    }
+
     public function logout(){
         check_admin_login();
         $this->session->unset_userdata('user');

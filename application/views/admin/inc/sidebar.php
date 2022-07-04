@@ -24,17 +24,22 @@
 
 
     <!-- Nav Item - Tables -->
-    <li class="nav-item">
+    <!-- <li class="nav-item">
         <a class="nav-link" href="<?= base_url('admin/product_listing'); ?>">
             <i class="fas fa-fw fa-table"></i>
             <span>Product listing</span></a>
-    </li>
+    </li> -->
 
        <!-- Nav Item - Tables -->
-       <li class="nav-item">
+       <!-- <li class="nav-item">
         <a class="nav-link" href="<?= base_url('admin/details'); ?>">
             <i class="fas fa-fw fa-table"></i>
             <span>Details</span></a>
+    </li> -->
+    <li class="nav-item">
+        <a class="nav-link" href="<?= base_url('admin/exchange'); ?>">
+            <i class="fas fa-fw fa-table"></i>
+            <span>Exchange</span></a>
     </li>
 
 </ul>

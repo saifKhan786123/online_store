@@ -62,7 +62,44 @@
     <!-- Page level custom scripts -->
     <script src="<?= base_url('assets/js/demo/chart-area-demo.js') ?>"></script>
     <script src="<?= base_url('assets/js/demo/chart-pie-demo.js') ?>"></script>
+<script>
+    $(document).ready(function() {
 
+        $(document).on('click', '#convert-price', function(e){
+            $(this).find('i').removeClass('d-none');
+            e.preventDefault();
+            let from = $('#from').find(':selected').val();
+            let to = $('#to').find(':selected').val();
+            let amount = $('#amount').val();
+
+           
+        $.ajax({
+           url: "<?= base_url('admin/convert_price') ?>",
+           type: 'POST',
+           data: {amount: amount, from: from, to:to},
+           error: function() {
+              console.log('Something is wrong');
+              $('#convert-price').find('i').addClass('d-none');
+           },
+           success: function(data) {
+               let res = JSON.parse(data);
+           
+            if(res.status == true){
+                $('#result').html(`<span class="text-success">${res.data}</span>`);
+            }else if(res.status == false){
+               
+                $('#result').html(`<span class="text-danger">${res.message}</span>`);
+            }
+            $('#convert-price').find('i').addClass('d-none');
+           }
+           
+        });
+
+        })
+
+    })
+</script>
 </body>
+
 
 </html>
