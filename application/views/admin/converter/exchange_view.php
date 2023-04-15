@@ -12,15 +12,15 @@
         <div class="row justify-content-center align-items-center">
             <div class="col-md-4">
                 <strong>From:</strong>
-                <select class="browser-default custom-select" id="from">
+                <select class="browser-default custom-select" id="from" required>
                     <!-- <option selected>Select Currency</option> -->
                     <option value="EUR" selected>EURO</option>
                 </select>
             </div>
             <div class="col-md-4">
                 <strong>To:</strong>
-                <select class="browser-default custom-select" id="to">
-                    <option selected>Select Currency</option>
+                <select class="browser-default custom-select" id="to" required>
+                    <option value="" selected>Select Currency</option>
                     <option value="USD">USD</option>
                     <option value="RON">RON</option>
                     
@@ -30,7 +30,7 @@
         <div class="row justify-content-center align-items-center">
             <div class="col-md-4">
                 <strong>Amount:</strong>
-                <input id="amount" type="number" name="amount" step="0.000000001" class="form-control" placeholder="Amount">
+                <input id="amount" type="number" name="amount" step="0.000000001" class="form-control" placeholder="Amount" required>
             </div>
             <div class="col-md-4">
                <div class="d-flex">
